@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fruits</title>
+</head>
+<body>
+<form method="POST">
+    <h1>Fruits du marché</h1>
+    Nom du fruit <input type="text" name="nom"/>
+    <input type="submit">
+</form>
+
+{% if fruits %}
+    <h3>Liste des fruits en base de données: </h3>
+    <ul>
+        {% for fruit in fruits %}
+            <li>{{ fruit.nom }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+</body>
+</html>
